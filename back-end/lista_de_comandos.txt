@@ -1,0 +1,5 @@
+Lista de comandos desde a criação até a publicação da airplanemode_active
+
+1 - npm init y
+2 - npm install express pg dotenv
+3 - npm install nodemon -d

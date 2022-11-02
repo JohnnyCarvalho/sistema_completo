@@ -1,0 +1,38 @@
+button{
+  color: #ff4081;
+
+
+}
+
+button:hover{
+  color: white;
+  background-color: #ff4081;
+}
+
+h2{
+  text-align: center;
+}
+
+mat-dialog-content{
+  /* padding-left: 300px;
+  padding-right: 300px; */
+  margin-left: 300px;
+  margin-right: 300px;
+
+}
+
+/* Atacando a lista de horários */
+.example-radio-group {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+  align-items: flex-start;
+
+
+}
+
+.example-radio-button {
+  margin: 5px;
+
+}
+
