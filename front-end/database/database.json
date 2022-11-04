@@ -1,5 +1,18 @@
 {
-  "data-user": [],
+  "data-user": [
+    {
+      "newUser": {
+        "name": "Johnny Carvalho",
+        "email": "johnny@gmail.com",
+        "phone": "41998787656",
+        "password": "123456789"
+      },
+      "id": 1
+    },
+    {
+      "id": 2
+    }
+  ],
   "login-user": [],
   "escala": [
     {
@@ -26,7 +39,5 @@
       ]
     }
   ],
-  "agendamento": [
-
-  ]
+  "agendamento": []
 }
