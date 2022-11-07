@@ -14,880 +14,141 @@ input{
   color: white;
 }
 
+.register-container {
+  width: 100%;
 
-/* Telas desktop 2560px */
-@media (max-width: 2560px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 40%;
-    position: absolute;
+  margin-left: 40%;
+  position: relative;
 
-    background-color: #424242;
-    border-radius: 10px;
+  background-color: #424242;
+  border-radius: 10px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
+  padding-top: 50px;
 
 
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
+  /* width: 20%; */
+  max-width: 350px;
+  min-width: 50px;
+  display: block;
+
+  text-align: center;
+
+  box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.mat-form-field{
+  width: 70%;
+}
+
+
+input.example-right-align::-webkit-outer-spin-button,
+input.example-right-align::-webkit-inner-spin-button {
   display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-
 }
 
-/* Telas desktop 1920px */
-@media (max-width: 1920px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 40%;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-
-}
-
-/* Telas desktop/notebook 1680px */
-@media (max-width: 1680px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 40%;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-
-}
-
-/* Telas notebook 1440px */
-@media (max-width: 1440px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 40%;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 1024px */
-@media (max-width: 1024px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 350px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 900px */
-@media (max-width: 900px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 250px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 750px */
-@media (max-width: 750px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 150px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 600px */
-@media (max-width: 600px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 100px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 500px */
-@media (max-width: 500px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 50px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas tablets 450px */
-@media (max-width: 450px ) {
-  .register-container {
-    margin-top: 150px;
-    margin-left: 20px;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    /* width: 20%; */
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-
-  .button-login{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-
-  .register-a {
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    /* color: #FF1493; */
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 30px;
-  }
-}
-
-/* Telas mobile 375px */
-@media (max-width: 375px){
-  .register-container {
-    margin-top: 100px;
-    margin-left: 50px;
-    margin-right: auto;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    width: 250px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-    margin-top: -10px;
-    margin-bottom: -5px;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-  .button-register{
-    margin-top: 10px;
-  }
-  button{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-
-  .register-a {
-
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 10px;
-
-
-  }
-}
-
-/* Telas mobile 320px */
-@media (max-width: 320px){
-  .register-container {
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: auto;
-    position: absolute;
-
-    background-color: #424242;
-    border-radius: 10px;
-
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    width: 250px;
-    display: block;
-
-    text-align: center;
-
-    box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-    margin-top: -10px;
-    margin-bottom: -5px;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons login/register and link register/login <--*/
-  .button-register{
-    margin-top: 10px;
-  }
-  button{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-
-  .register-a {
-
-    font-size: 15px;
-    color: white;
-    line-height: 1.2;
-    text-align: center;
-    text-decoration: none;
-  }
-
-  .register-a:hover {
-    color: #ff4081;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-
-  }
-
-  .link-register{
-    margin-top: 10px;
-
-
-  }
+input.example-right-align {
+  -moz-appearance: textfield;
 }
 
 
+/*--> Buttons login/register and link register/login <--*/
+
+.button-login{
+  margin-top: 30px;
+}
+button{
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+
+.register-a {
+  font-size: 15px;
+  color: white;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+}
+
+.register-a:hover {
+  /* color: #FF1493; */
+  color: #ff4081;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.link-register{
+  margin-top: 30px;
+}
+
+
+
+
+
+
+
+
+/* .shipping-card{
+  width: 80%;
+  border-radius: 10px;
+
+  box-shadow: 15px 10px 5px 5px rgba(0, 0, 0, 0.5);
+
+}
+
+.full-width {
+  width: 100%;
+}
+
+.shipping-card {
+  min-width: 120px;
+  margin: 20px auto;
+}
+
+.mat-radio-button {
+  display: block;
+  margin: 5px 0;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.col {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.col:last-child {
+  margin-right: 0;
+}
+
+
+.login-a {
+  font-size: 15px;
+  color: white;
+  line-height: 1.2;
+  text-decoration: none;
+
+}
+
+.login-a:hover {
+
+  color: #ff4081;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+
+}
+
+.buton-register{
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
+}
+
+ */

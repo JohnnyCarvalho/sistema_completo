@@ -19,7 +19,7 @@ export class FuncionarioService {
     return this.http.get<FuncionarioInterface[]>(`${API}/escala`)
     .pipe(
       first(),//Encerra conexão
-      res => res
+      (map(response => response)),
     )
   }
 

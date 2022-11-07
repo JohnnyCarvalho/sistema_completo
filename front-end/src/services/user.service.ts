@@ -17,13 +17,12 @@ export class UserService {
 
 
   //método para inserir novo usuário no banco de dados
-  public registerUser(newUser: RegisterModel): Observable<any> {
+  public registerUser(newUser: any){
 
-    return this.http.post<any>(`${API}/data-user`, {newUser: newUser}) //registration
-      .pipe(
-        res => res,
-        error => error
-      )
+    //registration
+    return this.http.post(`${API}registration.php`, {newUser: newUser}),
+    console.log('Aqui está dentro do user.service', newUser);
+
   }
 
   // Método para logar usuário no sistema

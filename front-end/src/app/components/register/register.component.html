@@ -1,3 +1,4 @@
+
 <form [formGroup]="formulario" novalidate (ngSubmit)="confirmRegister()">
 <div class="register-container">
   <h1>Register!</h1>
@@ -6,7 +7,7 @@
     <input
       matInput
       placeholder="example João Silva"
-      formControlName="name"
+      formControlName="nome"
       obrigatório
     />
   </mat-form-field>
@@ -19,17 +20,6 @@
       formControlName="email"
       obrigatório
     />
-
-  </mat-form-field>
-
-  <mat-form-field aspect="fill">
-    <mat-label> Enter your mobile phone! </mat-label>
-    <input
-      matInput
-      placeholder="example 41999999999"
-      formControlName="phone"
-      obrigatório
-    />
   </mat-form-field>
 
   <br />
@@ -38,7 +28,7 @@
     <input
     matInput
     [type]="hide ? 'password' : 'text'"
-    formControlName="psw" />
+    formControlName="senha" />
     <a
       color="primary"
       mat-icon-button
@@ -56,7 +46,7 @@
     <input
     matInput
     [type]="hide ? 'password' : 'text'"
-    formControlName="confirmPsw"
+    formControlName="confirmarSenha"
     />
 
     <a
@@ -73,8 +63,19 @@
 
   </mat-form-field>
 
+
+  <mat-form-field aspect="fill">
+    <mat-label> Enter your mobile phone! </mat-label>
+    <input
+      matInput
+      placeholder="example 41999999999"
+      formControlName="telefone"
+      obrigatório
+    />
+  </mat-form-field>
+
   <section>
-    <div class="button-register">
+    <div class="button-login">
       <button
       type="submit"
       mat-flat-button color="primary"

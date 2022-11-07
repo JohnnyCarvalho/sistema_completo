@@ -18,11 +18,12 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   formulario = this.newUserForm.group({
-    name: new FormControl(null, [Validators.required]),
+    nome: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    phone: new FormControl(null,  [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
-    psw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
-    confirmPsw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
+    senha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+    confirmarSenha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+    telefone: new FormControl(null,  [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
+
   });
 
   hide = true;
@@ -39,7 +40,7 @@ export class RegisterComponent implements OnInit {
         text: 'O formulário deve ser preenchido corretamente!',
       })
     }
-    else if (this.formulario.value.confirmPsw !== this.formulario.value.psw) {
+    else if (this.formulario.value.confirmarSenha !== this.formulario.value.senha) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -48,15 +49,14 @@ export class RegisterComponent implements OnInit {
     }
     else {
     let newUser: RegisterModel = new RegisterModel(
-      this.formulario.value.name,
+      this.formulario.value.nome,
       this.formulario.value.email,
-      this.formulario.value.phone,
-      this.formulario.value.psw
+      this.formulario.value.senha,
+      this.formulario.value.telefone,
     );
-    this.UserService.registerUser(newUser).subscribe((res) => {
-      newUser = res;
-    });
+    this.UserService.registerUser(newUser);
     if (newUser) {
+      console.log(`Aqui está dentro do register.component.ts`, newUser);
 
     Swal.fire({
       position: 'top-end',
@@ -67,6 +67,13 @@ export class RegisterComponent implements OnInit {
 
     })
     this.formulario.reset()
+      }
+      else {
+        Swal.fire({
+          icon: 'error',
+          title: 'Oops...',
+          text: 'Holve um problema de conexão!',
+        })
       }
     }
   }
