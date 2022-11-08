@@ -44,6 +44,7 @@ export class RegisterComponent implements OnInit {
         icon: 'error',
         title: 'Oops...',
         text: 'As senhas não conferem!',
+        timer: 2500
       })
     }
     else {
