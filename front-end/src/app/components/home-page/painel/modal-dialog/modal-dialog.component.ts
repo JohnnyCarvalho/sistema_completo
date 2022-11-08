@@ -37,6 +37,27 @@ export class ModalDialogComponent implements OnInit {
     }
 
 
+  public cancelarAgendamento() {
+
+    Swal.fire({
+      title: 'Deseja salvar as operações?',
+      showDenyButton: true,
+      showCancelButton: true,
+      confirmButtonText: 'Save',
+      denyButtonText: `Don't save`,
+    }).then((result) => {
+      /* Read more about isConfirmed, isDenied below */
+      if (result.isConfirmed) {
+        Swal.fire('Saved!', '', 'success')
+      } else if (result.isDenied) {
+        Swal.fire('As auterações não serão salvas', '', 'info')
+      }
+    })
+
+  }
+
+
+
     public ELEMENT_DATA: PeriodicElement[] = [
       {position: 'Primeiro Horário', horarios: '09:00'},
       {position: 'Segundo Horário', horarios: '10:00'},

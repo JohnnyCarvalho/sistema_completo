@@ -13,17 +13,16 @@ export class RegisterComponent implements OnInit {
   constructor(
     private UserService: UserService,
     private newUserForm: FormBuilder
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   formulario = this.newUserForm.group({
     nome: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required, Validators.email]),
+    telefone: new FormControl(null, [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
     senha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
-    confirmarSenha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
-    telefone: new FormControl(null,  [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
-
+    confirmPsw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
   });
 
   hide = true;
@@ -40,7 +39,7 @@ export class RegisterComponent implements OnInit {
         text: 'O formulário deve ser preenchido corretamente!',
       })
     }
-    else if (this.formulario.value.confirmarSenha !== this.formulario.value.senha) {
+    else if (this.formulario.value.confirmPsw !== this.formulario.value.senha) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
@@ -48,31 +47,32 @@ export class RegisterComponent implements OnInit {
       })
     }
     else {
-    let newUser: RegisterModel = new RegisterModel(
-      this.formulario.value.nome,
-      this.formulario.value.email,
-      this.formulario.value.senha,
-      this.formulario.value.telefone,
-    );
-    this.UserService.registerUser(newUser);
-    if (newUser) {
-      console.log(`Aqui está dentro do register.component.ts`, newUser);
+      let newUser: RegisterModel = new RegisterModel(
+        this.formulario.value.nome,
+        this.formulario.value.email,
+        this.formulario.value.senha,
+        this.formulario.value.telefone
+      );
+      this.UserService.registerUser(newUser).subscribe(res => {
+        console.log(res)
+      });
+      if (newUser === 'success') {
 
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Cadastro efetuado com sucesso!',
-      showConfirmButton: false,
-      timer: 2500
+        Swal.fire({
+          position: 'top-end',
+          icon: 'success',
+          title: 'Cadastro efetuado com sucesso!',
+          showConfirmButton: false,
+          timer: 2500
 
-    })
-    this.formulario.reset()
+        })
+        this.formulario.reset()
       }
-      else {
+      else if (newUser === 'error') {
         Swal.fire({
           icon: 'error',
           title: 'Oops...',
-          text: 'Holve um problema de conexão!',
+          text: 'Holve um problema!',
         })
       }
     }

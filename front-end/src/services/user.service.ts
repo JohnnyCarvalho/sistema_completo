@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { API } from 'backend/api';
 import { Observable } from 'rxjs';
 import { UserListLogin } from 'src/models/login-model';
 import { RegisterModel } from 'src/models/register-model';
-
 
 @Injectable({
   providedIn: 'root'
@@ -17,12 +16,13 @@ export class UserService {
 
 
   //método para inserir novo usuário no banco de dados
-  public registerUser(newUser: any){
-
-    //registration
-    return this.http.post(`${API}registration.php`, {newUser: newUser}),
-    console.log('Aqui está dentro do user.service', newUser);
-
+  public registerUser(newUser: RegisterModel) {
+  
+    console.log(JSON.stringify(newUser));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/registration.php`, JSON.stringify(newUser), httpOptions); //registration
   }
 
   // Método para logar usuário no sistema

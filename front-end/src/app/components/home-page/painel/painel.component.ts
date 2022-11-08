@@ -23,15 +23,11 @@ export class PainelComponent implements OnInit {
 
       this.disabled = true
 
-      // this.funcionariosList = this.funcionarioService.getEscala()
-      // console.log(this.funcionariosList);
-
       this.funcionarioService.getEscala().subscribe(
         resposta => {
           this.funcionariosList = resposta
           // debugger
           console.log(typeof this.funcionariosList[0].segunda);
-
         }
       )
   }

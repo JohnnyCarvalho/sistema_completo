@@ -15,16 +15,15 @@ input{
 }
 
 .register-container {
-  width: 100%;
-
+  margin-top: 150px;
   margin-left: 40%;
-  position: relative;
+  position: fixed;
 
   background-color: #424242;
   border-radius: 10px;
 
   padding-top: 50px;
-
+  padding-bottom: 50px;
 
   /* width: 20%; */
   max-width: 350px;
