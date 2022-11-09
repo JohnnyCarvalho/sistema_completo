@@ -1,7 +1,6 @@
 import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
 import { FuncionarioService } from 'src/services/funcionario.service';
 import { FuncionarioInterface } from '../../../../interfaces/funcionario-interface';
-import { Observable } from 'rxjs';
 import { MatDialog } from '@angular/material/dialog';
 import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 
@@ -21,16 +20,25 @@ export class PainelComponent implements OnInit {
     public dialog: MatDialog,
     ) {
 
-      this.disabled = true
+      this.disabled = false
 
       this.funcionarioService.getEscala().subscribe(
         resposta => {
           this.funcionariosList = resposta
-          // debugger
-          console.log(typeof this.funcionariosList[0].segunda);
+
+          resposta.filter(() => {
+            if (resposta.toString() === 'Disponivel') {
+              this.disabled = false
+            }
+            else {
+              this.disabled = true
+            }
+            return this.disabled
+          })
+
         }
       )
-  }
+    }
 
   openDialog() {
     // debugger

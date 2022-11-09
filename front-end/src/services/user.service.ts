@@ -26,12 +26,12 @@ export class UserService {
   }
 
   // Método para logar usuário no sistema
-  public loginUser(newLogin: UserListLogin): Observable<any> {
+  public loginUser(newLogin: UserListLogin) {
 
-    return this.http.post<any>(`${API}/login-user`, {newLogin: newLogin})
-      .pipe(
-        res => res,
-        error => error
-      )
+    console.log(JSON.stringify(newLogin));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/login.php`, JSON.stringify(newLogin), httpOptions) //login
   }
 }

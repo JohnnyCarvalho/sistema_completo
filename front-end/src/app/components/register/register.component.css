@@ -17,7 +17,7 @@ input{
 .register-container {
   margin-top: 150px;
   margin-left: 40%;
-  position: fixed;
+  position: absolute;
 
   background-color: #424242;
   border-radius: 10px;
