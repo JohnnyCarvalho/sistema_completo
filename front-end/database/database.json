@@ -2,15 +2,12 @@
   "data-user": [
     {
       "newUser": {
-        "name": "Johnny Carvalho",
-        "email": "johnny@gmail.com",
-        "phone": "41998787656",
-        "password": "123456789"
+        "name": "teste",
+        "email": "teste@teste",
+        "phone": "99999999999",
+        "password": "e2dAzz9vBDLDaR@"
       },
       "id": 1
-    },
-    {
-      "id": 2
     }
   ],
   "login-user": [],
