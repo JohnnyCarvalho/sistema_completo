@@ -1,5 +1,5 @@
 <form [formGroup]="formulario" novalidate (ngSubmit)="loginUser()">
-  <div class="login-container">
+  <div class="forms-container">
     <h1>Login!</h1>
     <mat-form-field aspect="fill">
       <mat-label> Enter your e-mail </mat-label>
@@ -33,15 +33,15 @@
     </mat-form-field>
 
     <section>
-      <div class="button-login">
+      <div class="button-forms">
         <button type="submit" mat-flat-button color="primary" >Login</button>
         <!-- <button mat-flat-button disabled>Disabled</button> -->
       </div>
     </section>
 
     <p>Not registration?</p>
-    <div class="link-register">
-      <a class="register-a" href="register">Register</a>
+    <div class="link-forms">
+      <a class="forms-a" href="register">Register</a>
     </div>
   </div>
 </form>

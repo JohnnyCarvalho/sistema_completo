@@ -26,7 +26,7 @@ export class PainelComponent implements OnInit {
         resposta => {
           this.funcionariosList = resposta
 
-          resposta.filter(() => {
+          /*resposta.filter(() => {
             if (resposta.toString() === 'Disponivel') {
               this.disabled = false
             }
@@ -34,7 +34,7 @@ export class PainelComponent implements OnInit {
               this.disabled = true
             }
             return this.disabled
-          })
+          })*/
 
         }
       )
