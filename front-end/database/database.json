@@ -10,7 +10,15 @@
       "id": 1
     }
   ],
-  "login-user": [],
+  "login-user": [
+    {
+      "newLogin": {
+        "email": "teste@teste",
+        "password": "e2dAzz9vBDLDaR@"
+      },
+      "id": 1
+    }
+  ],
   "escala": [
     {
       "name": "Johnny",
