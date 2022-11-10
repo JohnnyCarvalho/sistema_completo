@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormControl, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { UserListLogin } from 'src/models/login-model';
 import { UserService } from 'src/services/user.service';
 import Swal from 'sweetalert2';
@@ -12,7 +13,8 @@ import Swal from 'sweetalert2';
 export class LoginComponent implements OnInit {
   constructor(
     private newLoginUser: FormBuilder,
-    private loginUserService: UserService
+    private loginUserService: UserService,
+    private onLogin: Router
   ) {}
 
   formulario = this.newLoginUser.group({
@@ -52,7 +54,6 @@ export class LoginComponent implements OnInit {
             title: 'Oops...',
             text: 'Udsuário não cadastrado!',
           });
-
         }
         else {
           Swal.fire({
@@ -63,6 +64,7 @@ export class LoginComponent implements OnInit {
             timer: 2000,
           });
           this.formulario.reset();
+          this.onLogin.navigate(['/home'])
         }
       });
       // exemplo teste, quando tiver implementado o back e a resposta vier como true aqui vai haver um códico que entrará na home

@@ -3,6 +3,26 @@ a{
   color: white;
 }
 
+.table{
+  padding-left: 30px;
+  padding-right: 30px;
+
+}
+
+.example-spacer {
+  flex: 5 5 auto;
+}
+
+.demo-table {
+  width: 100%;
+}
+
+.mat-row .mat-cell {
+  border-bottom: 2px solid transparent;
+  border-top: 2px solid transparent;
+
+}
+
 a:hover {
   color: #ff4081;
   cursor: pointer;
@@ -27,4 +47,17 @@ button:hover{
 button:disabled:hover{
   color: #eb85a7;
   cursor: not-allowed;
+}
+
+
+th{
+  text-align: center;
+}
+
+td, button{
+  margin-right: 1px;
+}
+
+.mat-cell{
+  color: red;
 }

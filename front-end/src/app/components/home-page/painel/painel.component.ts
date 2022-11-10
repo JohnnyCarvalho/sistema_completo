@@ -13,8 +13,6 @@ export class PainelComponent implements OnInit {
 
   public funcionariosList: FuncionarioInterface[] = []
 
-  public disabled: boolean;
-
   public disponivel: string = 'Disponível'
   public indisponivel: string = 'Indisponível'
 
@@ -23,28 +21,6 @@ export class PainelComponent implements OnInit {
     public dialog: MatDialog,
     ) {
 
-      this.disabled = false
-
-      this.funcionarioService.getEscala().subscribe(
-        resposta => {
-          this.funcionariosList = resposta
-          console.log(resposta[0]);
-
-
-          resposta.filter(() => {
-            if (resposta.toString() === '1') {
-              this.disabled = false
-              
-              this.funcionariosList[0].segunda = this.disponivel
-
-            }
-            else {
-              this.disabled = true
-            }
-            return this.disabled
-          })
-        }
-      )
     }
 
   openDialog() {
@@ -60,7 +36,6 @@ export class PainelComponent implements OnInit {
 
   // Nomae das colunas da tabela
   displayedColumns: string[] = [
-    'name',
     'segunda',
     'terca',
     'quarta',
