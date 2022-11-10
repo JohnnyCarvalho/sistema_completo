@@ -13,3 +13,12 @@ h2{
   text-align: center;
 }
 
+.mat-dialog-container{
+  background-color: red;
+}
+
+.dialog-container{
+  position: relative;
+  overflow-y: scroll;
+}
+
