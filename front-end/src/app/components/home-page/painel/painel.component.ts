@@ -15,6 +15,9 @@ export class PainelComponent implements OnInit {
 
   public disabled: boolean;
 
+  public disponivel: string = 'Disponível'
+  public indisponivel: string = 'Indisponível'
+
   constructor(
     private funcionarioService: FuncionarioService,
     public dialog: MatDialog,
@@ -25,17 +28,21 @@ export class PainelComponent implements OnInit {
       this.funcionarioService.getEscala().subscribe(
         resposta => {
           this.funcionariosList = resposta
+          console.log(resposta[0]);
 
-          /*resposta.filter(() => {
-            if (resposta.toString() === 'Disponivel') {
+
+          resposta.filter(() => {
+            if (resposta.toString() === '1') {
               this.disabled = false
+              
+              this.funcionariosList[0].segunda = this.disponivel
+
             }
             else {
               this.disabled = true
             }
             return this.disabled
-          })*/
-
+          })
         }
       )
     }
