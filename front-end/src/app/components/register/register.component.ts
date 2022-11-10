@@ -18,10 +18,10 @@ export class RegisterComponent implements OnInit {
   ngOnInit(): void {}
 
   formulario = this.newUserForm.group({
-    name: new FormControl(null, [Validators.required]),
+    nome: new FormControl(null, [Validators.required]),
     email: new FormControl(null, [Validators.required, Validators.email]),
-    phone: new FormControl(null,  [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
-    psw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
+    telefone: new FormControl(null,  [Validators.required, Validators.minLength(11), Validators.maxLength(11)]),
+    senha: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)]),
     confirmPsw: new FormControl(null, [Validators.required, Validators.minLength(8), Validators.maxLength(20)])
   });
 
@@ -39,35 +39,35 @@ export class RegisterComponent implements OnInit {
         text: 'O formulário deve ser preenchido corretamente!',
       })
     }
-    else if (this.formulario.value.confirmPsw !== this.formulario.value.psw) {
+    else if (this.formulario.value.confirmPsw !== this.formulario.value.senha) {
       Swal.fire({
         icon: 'error',
         title: 'Oops...',
         text: 'As senhas não conferem!',
+        timer: 2500
       })
     }
     else {
-    let newUser: RegisterModel = new RegisterModel(
-      this.formulario.value.name,
+      let newUser: RegisterModel = new RegisterModel(
+      this.formulario.value.nome,
       this.formulario.value.email,
-      this.formulario.value.phone,
-      this.formulario.value.psw
+      this.formulario.value.senha,
+      this.formulario.value.telefone
     );
-    this.UserService.registerUser(newUser).subscribe((res) => {
-      newUser = res;
-    });
+    this.UserService.registerUser(newUser).subscribe(res => {
+      console.log(res)});
     if (newUser) {
 
-    Swal.fire({
-      position: 'top-end',
-      icon: 'success',
-      title: 'Cadastro efetuado com sucesso!',
-      showConfirmButton: false,
-      timer: 2500
+      Swal.fire({
+        position: 'top-end',
+        icon: 'success',
+        title: 'Cadastro efetuado com sucesso!',
+        showConfirmButton: false,
+        timer: 2500
 
-    })
-    this.formulario.reset()
-      }
+      })
+    //this.formulario.reset()
+    }
     }
   }
 }

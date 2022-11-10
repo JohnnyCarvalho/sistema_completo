@@ -1,7 +1,7 @@
 export interface FuncionarioInterface {
 
   // Essa interface será utilizada tando na lista de funcionarios como na lista de horários de atendimento
-  name: string;
+  nome: string;
   segunda: string;
   terca: string;
   quarta: string;

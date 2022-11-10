@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
 
   formulario = this.newLoginUser.group({
     email: new FormControl(null, [Validators.required, Validators.email]),
-    psw: new FormControl(null, [
+    senha: new FormControl(null, [
       Validators.required,
       Validators.minLength(8),
       Validators.maxLength(20),
@@ -42,12 +42,10 @@ export class LoginComponent implements OnInit {
     else {
       let newLogin: UserListLogin = new UserListLogin(
         this.formulario.value.email,
-        this.formulario.value.psw
+        this.formulario.value.senha
       );
       this.loginUserService.loginUser(newLogin).subscribe(
         (res) => {
-        (newLogin = res)
-
         if (res === 'error') {
           Swal.fire({
             icon: 'error',
