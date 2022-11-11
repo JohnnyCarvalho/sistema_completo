@@ -42,12 +42,10 @@ h2{
   .dialog-container{
     position: relative;
 
-    overflow-y: hidden;
-    overflow-x: hidden;
+    overflow-y: scroll;
 
     padding-left: -25px;
     padding-right: -50px;
-
   }
 
 }
