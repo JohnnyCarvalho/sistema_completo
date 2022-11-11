@@ -6,9 +6,6 @@ a{
 .table{
   padding-left: 30px;
   padding-right: 30px;
-  border-radius: 5px;
-
-
 
 }
 
@@ -64,3 +61,113 @@ td, button{
 .mat-cell{
   color: red;
 }
+
+/* Telas notebook 1920px */
+@media (max-width: 1920px ) {
+  td, button{
+    margin-left: -40px;
+  }
+
+  .table-true{
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin-left: -15px;
+    margin-right: -50px;
+  }
+}
+
+/* Telas notebook 1440px */
+@media (max-width: 1440px ) {
+  td, button{
+    margin-left: -40px;
+  }
+
+  .table-true{
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin-left: -15px;
+    margin-right: -50px;
+
+  }
+}
+
+/* Telas notebooks/tablets 1024px */
+@media (max-width: 1024px ) {
+
+  td, button{
+    margin-left: -40px;
+  }
+
+  .table-true{
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin-left: -15px;
+    margin-right: -50px;
+
+    margin-top: -25px;
+
+  }
+
+}
+
+/* Telas tablets/smatphones 900px */
+@media (max-width: 900px ) {
+
+  td, button{
+    margin-left: -40px;
+  }
+
+  .table-true{
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    margin-left: -15px;
+    margin-right: -50px;
+
+    margin-top: -40px;
+
+  }
+
+  .table {
+    margin-top: 50px;
+  }
+}
+
+/* Telas smatphones 750px */
+@media (max-width: 750px ) {
+
+}
+
+/* Telas smatphones 600px */
+@media (max-width: 600px ) {
+
+}
+
+/* Telas smatphones 500px */
+@media (max-width: 500px ) {
+
+}
+
+/* Telas smatphones 450px */
+@media (max-width: 450px ) {
+
+}
+
+/* Telas smatphones 375px */
+@media (max-width: 375px){
+
+}
+
+/* Telas smatphones 320px */
+@media (max-width: 320px){
+
+}
+
+
+

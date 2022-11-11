@@ -1,7 +1,7 @@
 button{
   color: #ff4081;
 
-
+  margin-left: 20px;
 }
 
 button:hover{
@@ -13,13 +13,25 @@ h2{
   text-align: center;
 }
 
-.mat-dialog-container{
-  background-color: red;
-}
-
 .dialog-container{
   position: relative;
   overflow-y: scroll;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+/* Telas notebook 1920px */
+@media (max-width: 1920px ) {
+
+  .dialog-container{
+
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: hidden ;
+
+    padding-right: -70px;
+  }
 }
 
 
@@ -28,411 +40,93 @@ h2{
 @media (max-width: 1440px ) {
 
   .dialog-container{
-    background-color: red;
+    position: relative;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    padding-left: -25px;
+    padding-right: -50px;
+
   }
 
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 40%;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
 
 /* Telas notebooks/tablets 1024px */
 @media (max-width: 1024px ) {
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 350px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
+  h2{
+    text-align: center;
+    margin-top: 25px;
   }
 
-  .mat-form-field{
-    width: 70%;
+  .dialog-container{
+    position: relative;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    padding-left: -25px;
+    padding-right: -50px;
+
+    margin-top: -25px;
+
+
   }
 
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
+
 
 /* Telas tablets/smatphones 900px */
 @media (max-width: 900px ) {
-  .forms-container {
+
+  h2{
+    text-align: center;
     margin-top: 50px;
-    margin-left: 250px;
-
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-
   }
 
-  .mat-form-field{
-    width: 70%;
+  .dialog-container{
+    position: relative;
+
+    overflow-y: hidden;
+    overflow-x: hidden;
+
+    padding-left: -25px;
+    padding-right: -50px;
+
+    margin-top: -50px;
+
+
   }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
   }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
-}
 
 /* Telas smatphones 750px */
 @media (max-width: 750px ) {
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 150px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
 
 /* Telas smatphones 600px */
 @media (max-width: 600px ) {
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 100px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
 
 /* Telas smatphones 500px */
 @media (max-width: 500px ) {
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 50px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
 
 /* Telas smatphones 450px */
 @media (max-width: 450px ) {
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 20px;
 
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-    max-width: 350px;
-    min-width: 50px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-
-  .button-fomrs{
-    margin-top: 30px;
-  }
-  button{
-    padding-left: 50px;
-    padding-right: 50px;
-  }
-
-  .link-forms{
-    margin-top: 30px;
-  }
 }
 
 /* Telas smatphones 375px */
 @media (max-width: 375px){
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 50px;
-    margin-right: auto;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    width: 250px;
-    display: block;
-
-  }
-
-  .mat-form-field{
-    width: 70%;
-    margin-top: -10px;
-    margin-bottom: -5px;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-  .button-forms{
-    margin-top: 10px;
-  }
-  button{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .link-forms{
-    margin-top: 10px;
-
-
-  }
 }
 
 /* Telas smatphones 320px */
 @media (max-width: 320px){
-  .forms-container {
-    margin-top: 50px;
-    margin-left: 10px;
-    margin-right: auto;
 
-    padding-top: 15px;
-    padding-bottom: 15px;
-    padding-left: 5px;
-    padding-right: 5px;
-
-    width: 250px;
-    display: block;
-  }
-
-  .mat-form-field{
-    width: 70%;
-    margin-top: -10px;
-    margin-bottom: -5px;
-  }
-
-
-  input.example-right-align::-webkit-outer-spin-button,
-  input.example-right-align::-webkit-inner-spin-button {
-    display: none;
-  }
-
-  input.example-right-align {
-    -moz-appearance: textfield;
-  }
-
-
-  /*--> Buttons fomrs/forms and link forms/fomrs <--*/
-  .button-forms{
-    margin-top: 10px;
-  }
-  button{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-
-  .link-forms{
-    margin-top: 10px;
-
-  }
 }
 
