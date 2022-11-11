@@ -6,6 +6,9 @@ a{
 .table{
   padding-left: 30px;
   padding-right: 30px;
+  border-radius: 5px;
+
+
 
 }
 
@@ -55,7 +58,7 @@ th{
 }
 
 td, button{
-  margin-right: 1px;
+  margin-left: -40px;
 }
 
 .mat-cell{
