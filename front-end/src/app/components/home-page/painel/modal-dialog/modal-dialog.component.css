@@ -77,23 +77,15 @@ h2{
 
 /* Telas tablets/smatphones 900px */
 @media (max-width: 900px ) {
-
   h2{
     color: transparent;
-
   }
 
   .dialog-container{
     position: relative;
+    padding-top: -50px;
 
-    overflow-y: hidden;
-    overflow-x: hidden;
-
-    /* padding-left: -25px;
-    padding-right: -50px; */
-
-    /* margin-top: -50px; */
-    margin-left: -25px;
+    
 
 
   }
@@ -128,4 +120,6 @@ h2{
 @media (max-width: 320px){
 
 }
+
+
 
