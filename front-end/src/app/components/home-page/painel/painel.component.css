@@ -28,3 +28,52 @@ button:disabled:hover{
   color: #eb85a7;
   cursor: not-allowed;
 }
+
+
+/*---> CARD <---*/
+.cards-container{
+  display: flex;
+  
+}
+
+.card-container {
+  max-width: 400px;
+  border-radius: 5px;
+
+  transition: all 0.3s;
+  cursor: pointer;
+
+  margin-left: 25px;
+
+}
+
+.card-container:hover {
+  -webkit-filter: drop-shadow(15px 10px 5px rgba(0,0,0,.5));
+  filter: drop-shadow(15px 10px 5px  rgba(0,0,0,.5));
+}
+
+.image-johnny {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro-profissional-com-tesoura-cabeleireiro-estiloso-na-barbearia-barba-estilizada-e-cortada-publicidade-brutal-cara-barbudo-194646299.jpg');
+  background-size: cover;
+}
+
+.image-lucas {
+  background-image: url('../../../../assets/IMG/img.funcionarios/img-lucas.jpeg');
+  background-size: cover;
+}
+
+.image-bruna {
+  background-image: url('../../../../assets/IMG/img.funcionarios/bruna.webp');
+  background-size: cover;
+}
+
+button{
+  color: #ff4081;
+
+  
+}
+
+button:hover{
+  color: white;
+  background-color: #ff4081;
+}
