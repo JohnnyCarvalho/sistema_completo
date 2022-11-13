@@ -32,7 +32,12 @@ button:disabled:hover{
 
 /*---> CARD <---*/
 .cards-container{
-  display: flex;
+  
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  grid-auto-rows: auto;
+  grid-row-gap: 25px;
   
 }
 
@@ -52,19 +57,64 @@ button:disabled:hover{
   filter: drop-shadow(15px 10px 5px  rgba(0,0,0,.5));
 }
 
-.image-johnny {
-  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro-profissional-com-tesoura-cabeleireiro-estiloso-na-barbearia-barba-estilizada-e-cortada-publicidade-brutal-cara-barbudo-194646299.jpg');
+.barbeiro-1 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro1.jpg');
   background-size: cover;
+  
 }
 
-.image-lucas {
-  background-image: url('../../../../assets/IMG/img.funcionarios/img-lucas.jpeg');
+.barbeiro-2 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro2.webp');
   background-size: cover;
+  padding: auto;
 }
 
-.image-bruna {
-  background-image: url('../../../../assets/IMG/img.funcionarios/bruna.webp');
+.barbeiro-3 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro3.jpeg');
   background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-4 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro4.webp');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-5 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro5.png');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-6 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro6.jpeg');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-7 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro7.png');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-8 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro8.png');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-9 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro9.png');
+  background-size: cover;
+  padding: auto;
+}
+
+.barbeiro-10 {
+  background-image: url('../../../../assets/IMG/img.funcionarios/barbeiro10.jpg');
+  background-size: cover;
+  padding: auto;
 }
 
 button{
@@ -76,4 +126,142 @@ button{
 button:hover{
   color: white;
   background-color: #ff4081;
+}
+
+
+/*--> Telas Telas mobile de  320px até 375px*/
+@media (min-width: 320px) {
+
+  .cards-container{
+  
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  
+    grid-auto-rows: auto;
+    grid-row-gap: 25px;
+    
+  }
+  
+  .card-container {
+    max-width: 250px;
+    border-radius: 5px;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    margin-left: 25px;
+  
+  }
+}
+
+
+
+/*--> Telas Telas ipads e tablets*/
+@media (min-width: 480px) {
+
+  .cards-container{
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+    grid-auto-rows: auto;
+    grid-row-gap: 25px;
+    
+  }
+  
+  .card-container {
+    max-width: 300px;
+    border-radius: 5px;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    margin-left: 25px;
+  
+  }
+  
+}
+
+
+
+/*--> Telas Telas laptop pequenos  */
+@media (min-width: 769px) {
+
+  .cards-container{
+  
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  
+    grid-auto-rows: auto;
+    grid-row-gap: 25px;
+    
+  }
+  
+  .card-container {
+    max-width: 400px;
+    border-radius: 5px;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    margin-left: 25px;
+  
+  }
+  
+}
+
+
+
+/*--> Telas Telas laptop grandes e desktops  */
+@media (min-width: 1025px) {
+
+  .cards-container{
+  
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  
+    grid-auto-rows: auto;
+    grid-row-gap: 25px;
+    
+  }
+  
+  .card-container {
+    max-width: 400px;
+    border-radius: 5px;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    margin-left: 25px;
+  
+  }
+  
+}
+
+
+
+/*--> Demais telas grandes  */
+@media (min-width: 1201px) {
+
+  .cards-container{
+  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  
+    grid-auto-rows: auto;
+    grid-row-gap: 25px;
+    
+  }
+  
+  .card-container {
+    max-width: 400px;
+    border-radius: 5px;
+  
+    transition: all 0.3s;
+    cursor: pointer;
+  
+    margin-left: 25px;
+  
+  }
+  
 }

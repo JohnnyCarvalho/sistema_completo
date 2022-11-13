@@ -26,6 +26,8 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ModalDialogComponent } from './components/home-page/painel/modal-dialog/modal-dialog.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import { TableEscalaComponent } from './components/home-page/painel/modal-dialog/table-escala/table-escala.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+
 
 @NgModule({
   declarations: [
@@ -56,7 +58,8 @@ import { TableEscalaComponent } from './components/home-page/painel/modal-dialog
     MatToolbarModule,
     MatTableModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule
 
   ],
   providers: [],
