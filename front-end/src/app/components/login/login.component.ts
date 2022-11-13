@@ -67,7 +67,6 @@ export class LoginComponent implements OnInit {
           this.onLogin.navigate(['/home'])
         }
       });
-      // exemplo teste, quando tiver implementado o back e a resposta vier como true aqui vai haver um códico que entrará na home
     }
   }
 }
