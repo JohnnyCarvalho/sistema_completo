@@ -66,7 +66,7 @@ export class RegisterComponent implements OnInit {
         timer: 2500
 
       })
-    //this.formulario.reset()
+    this.formulario.reset()
     }
     }
   }
