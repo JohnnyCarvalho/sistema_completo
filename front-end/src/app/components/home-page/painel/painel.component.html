@@ -12,91 +12,91 @@
     </ng-container>
 
     <!-- Segunda Column -->
-    <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === 'Disponivel'; else activate_button_segunda">
+    <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === '1'; else activate_button_segunda">
       <th mat-header-cell *matHeaderCellDef>SEGUNDA</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.segunda }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_segunda>
-      <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === 'Indisponivel'">
+      <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === '0'">
         <th mat-header-cell *matHeaderCellDef>SEGUNDA</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.segunda }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Terca Column -->
-    <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === 'Disponivel'; else activate_button_terca">
+    <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === '1'; else activate_button_terca">
       <th mat-header-cell *matHeaderCellDef>TERCA</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.terca }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_terca>
-      <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === 'Indisponivel'">
+      <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === '0'">
         <th mat-header-cell *matHeaderCellDef>TERCA</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.terca }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Quarta Column -->
-    <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === 'Disponivel'; else activate_button_quarta">
+    <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === '1'; else activate_button_quarta">
       <th mat-header-cell *matHeaderCellDef>QUARTA</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.quarta }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_quarta>
-      <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === 'Indisponivel'">
+      <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === '0'">
         <th mat-header-cell *matHeaderCellDef>QUARTA</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.quarta }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Quinta Column -->
-    <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === 'Disponivel'; else activate_button_quinta">
+    <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === '1'; else activate_button_quinta">
       <th mat-header-cell *matHeaderCellDef>QUINTA</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.quinta }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_quinta>
-      <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === 'Indisponivel'">
+      <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === '0'">
         <th mat-header-cell *matHeaderCellDef>QUINTA</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.quinta }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Sexta Column -->
-    <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === 'Disponivel'; else activate_button_sexta">
+    <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === '1'; else activate_button_sexta">
       <th mat-header-cell *matHeaderCellDef>SEXTA</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.sexta }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_sexta>
-      <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === 'Indisponivel'">
+      <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === '0'">
         <th mat-header-cell *matHeaderCellDef>SEXTA</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.sexta }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Sabado Column -->
-    <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === 'Disponivel'; else activate_button_sabado">
+    <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === '1'; else activate_button_sabado">
       <th mat-header-cell *matHeaderCellDef>SABADO</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.sabado }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_sabado>
-      <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === 'Indisponivel'">
+      <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === '0'">
         <th mat-header-cell *matHeaderCellDef>SABADO</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.sabado }}</button></td>
       </ng-container>
     </ng-template>
 
     <!-- Domingo Column -->
-    <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === 'Disponivel'; else activate_button_domingo">
+    <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === '1'; else activate_button_domingo">
       <th mat-header-cell *matHeaderCellDef>DOMINGO</th>
       <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.domingo }}</button></td>
     </ng-container>
 
     <ng-template #activate_button_domingo>
-      <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === 'Indisponivel'">
+      <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === '0'">
         <th mat-header-cell *matHeaderCellDef>DOMINGO</th>
         <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.domingo }}</button></td>
       </ng-container>
