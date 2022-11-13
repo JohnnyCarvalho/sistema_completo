@@ -14,6 +14,8 @@ export class TableEscalaComponent implements OnInit {
 
   public disabled: boolean = true;
 
+  public condicao: FuncionarioInterface[] = []
+
   public horariosList: PeriodicElement[] = [
     { horarios: '09:00' },
     { horarios: '10:00' },
@@ -34,8 +36,9 @@ export class TableEscalaComponent implements OnInit {
 
     this.funcionarioService.getEscala().subscribe(
       resposta => {
-        console.log(resposta);
-        console.log(typeof resposta);
+        this.condicao = resposta
+        console.log(this.condicao);
+
       }
     )
   }
