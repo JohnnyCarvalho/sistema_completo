@@ -12,6 +12,8 @@ import { ModalDialogComponent } from '../modal-dialog.component';
 })
 export class TableEscalaComponent implements OnInit {
 
+  public disabled: boolean = true;
+
   public horariosList: PeriodicElement[] = [
     { horarios: '09:00' },
     { horarios: '10:00' },
@@ -28,8 +30,15 @@ export class TableEscalaComponent implements OnInit {
   constructor(
     private funcionarioService: FuncionarioService,
     public dialog: MatDialog,
-  ) {}
+  ) {
 
+    this.funcionarioService.getEscala().subscribe(
+      resposta => {
+        console.log(resposta);
+        console.log(typeof resposta);
+      }
+    )
+  }
 
   ngOnInit(): void { }
 
@@ -44,10 +53,7 @@ export class TableEscalaComponent implements OnInit {
     'domingo',
   ];
 
-
   agendarHorario() {
     console.log('Horário agendado com sucesso!');
-
   }
-
 }
