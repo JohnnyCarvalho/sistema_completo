@@ -61,6 +61,17 @@ export class TableEscalaComponent implements OnInit {
     this.funcionarioService.getEscala().subscribe(
       resposta => {
         this.condicao = resposta
+        console.log(resposta);
+
+
+        if (this.condicao[0].segunda === '0') {
+          this.disabled = true
+          console.log('Dentro do if: ', this.condicao[0].segunda);
+
+        }
+        else {
+          this.disabled = false
+        }
       }
     )
   }
