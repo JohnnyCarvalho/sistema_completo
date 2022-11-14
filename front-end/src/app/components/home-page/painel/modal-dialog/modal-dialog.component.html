@@ -1,24 +1,7 @@
 <h2 mat-dialog-title>Horários disponíveis!</h2>
-
-<div class="modal-container">
-  <mat-dialog-content class="mat-typography">
-    <div class="table-container">
-      <mat-radio-group
-        color="primary"
-        aria-labelledby="example-radio-group-label"
-        class="example-radio-group"
-      >
-        <mat-radio-button
-          class="example-radio-button"
-          *ngFor="let season of ELEMENT_DATA"
-          [value]="season.position && season.horarios"
-        >
-          {{ season.position }} - {{ season.horarios }}
-        </mat-radio-button>
-      </mat-radio-group>
-    </div>
-  </mat-dialog-content>
-
+<mat-dialog-content>
+<app-table-escala></app-table-escala>
+</mat-dialog-content>
   <mat-dialog-actions>
     <button mat-button mat-dialog-close (click)="cancelarAgendamento()">
       Cancel
@@ -33,4 +16,4 @@
       Confirmar agendamento!
     </button>
   </mat-dialog-actions>
-</div>
+
