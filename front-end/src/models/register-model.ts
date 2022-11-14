@@ -1,9 +1,9 @@
 export class RegisterModel {
 
   constructor(
-    public name: any,
+    public nome?: any,
     public email?: any,
-    public phone?: any,
-    public password?: any
+    public senha?: any,
+    public telefone?: any
   ) { }
 }

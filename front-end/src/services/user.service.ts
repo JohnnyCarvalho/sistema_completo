@@ -1,10 +1,9 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { API } from 'backend/api';
 import { Observable } from 'rxjs';
 import { UserListLogin } from 'src/models/login-model';
 import { RegisterModel } from 'src/models/register-model';
-
 
 @Injectable({
   providedIn: 'root'
@@ -17,22 +16,22 @@ export class UserService {
 
 
   //método para inserir novo usuário no banco de dados
-  public registerUser(newUser: RegisterModel): Observable<any> {
-
-    return this.http.post<any>(`${API}/data-user`, {newUser: newUser}) //registration
-      .pipe(
-        res => res,
-        error => error
-      )
+  public registerUser(newUser: RegisterModel) {
+  
+    console.log(JSON.stringify(newUser));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/registration.php`, JSON.stringify(newUser), httpOptions); //registration
   }
 
   // Método para logar usuário no sistema
-  public loginUser(newLogin: UserListLogin): Observable<any> {
+  public loginUser(newLogin: UserListLogin) {
 
-    return this.http.post<any>(`${API}/login-user`, {newLogin: newLogin})
-      .pipe(
-        res => res,
-        error => error
-      )
+    console.log(JSON.stringify(newLogin));
+    const httpOptions = {
+      headers: new HttpHeaders({'Content-Type': 'application/json'})
+    };
+    return this.http.post(`${API}/login.php`, JSON.stringify(newLogin), httpOptions) //login
   }
 }

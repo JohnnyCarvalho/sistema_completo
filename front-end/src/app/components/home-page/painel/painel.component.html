@@ -1,113 +1,222 @@
-<div class="table-true">
-  <!-- Inicio da tabela -->
-  <table
-    mat-table
-    [dataSource]="funcionariosList"
-    class="mat-elevation-z8 demo-table"
-  >
-    <!-- Name Column -->
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef>NAME</th>
-      <td mat-cell *matCellDef="let element">{{ element.name }}</td>
-    </ng-container>
+<div class="cards-container">
 
-    <!-- Segunda Column -->
-    <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === 'Disponivel'; else activate_button_segunda">
-      <th mat-header-cell *matHeaderCellDef>SEGUNDA</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.segunda }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_segunda>
-      <ng-container matColumnDef="segunda" *ngIf="funcionariosList[0].segunda === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>SEGUNDA</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.segunda }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Terca Column -->
-    <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === 'Disponivel'; else activate_button_terca">
-      <th mat-header-cell *matHeaderCellDef>TERCA</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.terca }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_terca>
-      <ng-container matColumnDef="terca" *ngIf="funcionariosList[0].terca === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>TERCA</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.terca }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Quarta Column -->
-    <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === 'Disponivel'; else activate_button_quarta">
-      <th mat-header-cell *matHeaderCellDef>QUARTA</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.quarta }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_quarta>
-      <ng-container matColumnDef="quarta" *ngIf="funcionariosList[0].quarta === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>QUARTA</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.quarta }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Quinta Column -->
-    <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === 'Disponivel'; else activate_button_quinta">
-      <th mat-header-cell *matHeaderCellDef>QUINTA</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.quinta }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_quinta>
-      <ng-container matColumnDef="quinta" *ngIf="funcionariosList[0].quinta === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>QUINTA</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.quinta }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Sexta Column -->
-    <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === 'Disponivel'; else activate_button_sexta">
-      <th mat-header-cell *matHeaderCellDef>SEXTA</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.sexta }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_sexta>
-      <ng-container matColumnDef="sexta" *ngIf="funcionariosList[0].sexta === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>SEXTA</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.sexta }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Sabado Column -->
-    <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === 'Disponivel'; else activate_button_sabado">
-      <th mat-header-cell *matHeaderCellDef>SABADO</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.sabado }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_sabado>
-      <ng-container matColumnDef="sabado" *ngIf="funcionariosList[0].sabado === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>SABADO</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.sabado }}</button></td>
-      </ng-container>
-    </ng-template>
-
-    <!-- Domingo Column -->
-    <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === 'Disponivel'; else activate_button_domingo">
-      <th mat-header-cell *matHeaderCellDef>DOMINGO</th>
-      <td mat-cell *matCellDef="let element"><button (click)="openDialog()">{{ element.domingo }}</button></td>
-    </ng-container>
-
-    <ng-template #activate_button_domingo>
-      <ng-container matColumnDef="domingo" *ngIf="funcionariosList[0].domingo === 'Indisponivel'">
-        <th mat-header-cell *matHeaderCellDef>DOMINGO</th>
-        <td mat-cell *matCellDef="let element"><button [disabled]="disabled" (click)="openDialog()">{{ element.domingo }}</button></td>
-      </ng-container>
-    </ng-template>
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-1"></div>
+            <mat-card-title>{{funcionariosList[0].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro4.webp"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
 
 
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr
-      mat-row
-      *matRowDef="let row; columns: displayedColumns"
-    ></tr>
-  </table>
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-2"></div>
+            <mat-card-title>{{funcionariosList[1].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro2.webp"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-3"></div>
+            <mat-card-title>{{funcionariosList[2].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro3.jpeg"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-4"></div>
+            <mat-card-title>{{funcionariosList[3].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro1.jpg"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-5"></div>
+            <mat-card-title>{{funcionariosList[4].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro5.png"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-6"></div>
+            <mat-card-title>{{funcionariosList[5].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro6.jpeg"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-7"></div>
+            <mat-card-title>{{funcionariosList[6].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro7.png"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-8"></div>
+            <mat-card-title>{{funcionariosList[7].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro8.png"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-9"></div>
+            <mat-card-title>{{funcionariosList[8].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro9.png"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
+
+    <mat-card class="card-container">
+        <mat-card-header>
+            <div mat-card-avatar class="barbeiro-10"></div>
+            <mat-card-title>{{funcionariosList[9].nome}}</mat-card-title>
+            <mat-card-subtitle>Barbeiro e Cabeleireiro</mat-card-subtitle>
+        </mat-card-header>
+        <img mat-card-image
+            src="../../../../assets/IMG/img.funcionarios/barbeiro10.png"
+            alt="Photo of a Shiba Inu">
+        <mat-card-content>
+            <p>
+                Johnny carvalho trabalha no ramos de cabeleireiro e barbeiro desde meados dos anos 90, esse profissional
+                tem muitos casos de sucesso, dentre seus clientes estão famosos como Retinho Jr, Ratinho, Silvio Santos,
+                Fausto Silva entre outros.
+            </p>
+        </mat-card-content>
+        <mat-card-actions>
+            <button mat-button (click)="openDialog()">Horários!</button>
+        </mat-card-actions>
+    </mat-card>
+
 </div>
 

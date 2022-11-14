@@ -6,8 +6,7 @@
     <input
       matInput
       placeholder="example João Silva"
-      formControlName="name"
-      obrigatório
+      formControlName="nome"
     />
   </mat-form-field>
 
@@ -17,7 +16,6 @@
       matInput
       placeholder="email@example.com"
       formControlName="email"
-      obrigatório
     />
 
   </mat-form-field>
@@ -27,8 +25,7 @@
     <input
       matInput
       placeholder="example 41999999999"
-      formControlName="phone"
-      obrigatório
+      formControlName="telefone"
     />
   </mat-form-field>
 
@@ -38,7 +35,8 @@
     <input
     matInput
     [type]="hide ? 'password' : 'text'"
-    formControlName="psw" />
+    formControlName="senha"
+    />
     <a
       color="primary"
       mat-icon-button

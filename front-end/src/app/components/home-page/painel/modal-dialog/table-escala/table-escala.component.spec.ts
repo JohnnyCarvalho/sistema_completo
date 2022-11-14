@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalHorariosComponent } from './modal-horarios.component';
+import { TableEscalaComponent } from './table-escala.component';
 
-describe('ModalHorariosComponent', () => {
-  let component: ModalHorariosComponent;
-  let fixture: ComponentFixture<ModalHorariosComponent>;
+describe('TableEscalaComponent', () => {
+  let component: TableEscalaComponent;
+  let fixture: ComponentFixture<TableEscalaComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ModalHorariosComponent ]
+      declarations: [ TableEscalaComponent ]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(ModalHorariosComponent);
+    fixture = TestBed.createComponent(TableEscalaComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

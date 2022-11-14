@@ -13,26 +13,12 @@ h2{
   text-align: center;
 }
 
-mat-dialog-content{
-  /* padding-left: 300px;
-  padding-right: 300px; */
-  margin-left: 300px;
-  margin-right: 300px;
+.dialog-container{
+  position: relative;
+  overflow-y: scroll;
 
-}
-
-/* Atacando a lista de horários */
-.example-radio-group {
-  display: flex;
-  flex-direction: column;
-  margin: 15px 0;
-  align-items: flex-start;
-
-
-}
-
-.example-radio-button {
-  margin: 5px;
-
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-bottom: 50px;
 }
 

@@ -25,7 +25,8 @@ import { RegisterComponent } from './components/register/register.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { ModalDialogComponent } from './components/home-page/painel/modal-dialog/modal-dialog.component';
 import {MatCheckboxModule} from '@angular/material/checkbox';
-
+import { TableEscalaComponent } from './components/home-page/painel/modal-dialog/table-escala/table-escala.component';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 
 @NgModule({
@@ -37,7 +38,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     TopoComponent,
     RodapeComponent,
     PainelComponent,
-    ModalDialogComponent
+    ModalDialogComponent,
+    TableEscalaComponent
   ],
   imports: [
     BrowserModule,
@@ -56,7 +58,8 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatToolbarModule,
     MatTableModule,
     MatDialogModule,
-    MatCheckboxModule
+    MatCheckboxModule,
+    MatGridListModule
 
   ],
   providers: [],
