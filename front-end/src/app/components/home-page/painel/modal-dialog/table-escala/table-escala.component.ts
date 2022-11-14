@@ -26,8 +26,32 @@ export class TableEscalaComponent implements OnInit {
     { horarios: '16:00' },
     { horarios: '17:00' },
     { horarios: '18:00' },
-    { horarios: '19:00' },
+    { horarios: '19:00' }
   ];
+
+  public horarios = this.horariosList;
+
+
+  public somenteHorarios() {
+
+    console.log(this.horarios.forEach((element) => {
+      if (element.horarios.length < 9) {
+
+        let segunda = element.horarios[0]
+        let terca = element.horarios[1]
+        let quarta = element.horarios[2]
+        let quinta = element.horarios[3]
+        let sexta = element.horarios[4]
+        let sabado = element.horarios[5]
+        let domingo = element.horarios[6]
+
+        console.log('Essa é a segunda: ', segunda);
+
+
+      }
+    }));
+
+  }
 
   constructor(
     private funcionarioService: FuncionarioService,
@@ -37,8 +61,6 @@ export class TableEscalaComponent implements OnInit {
     this.funcionarioService.getEscala().subscribe(
       resposta => {
         this.condicao = resposta
-        console.log(this.condicao);
-
       }
     )
   }
