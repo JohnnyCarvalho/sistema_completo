@@ -1,9 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { FuncionarioInterface } from 'src/interfaces/funcionario-interface';
 import { PeriodicElement } from 'src/interfaces/teste-interface';
+import { Escala } from 'src/models/escala-model';
 import { FuncionarioService } from 'src/services/funcionario.service';
 import { ModalDialogComponent } from '../modal-dialog.component';
+import { PainelComponent } from '../../painel.component';
+import { Agendamento } from 'src/models/agendamento-model';
+import { LoginComponent } from 'src/app/components/login/login.component';
 
 @Component({
   selector: 'app-table-escala',
@@ -12,9 +16,9 @@ import { ModalDialogComponent } from '../modal-dialog.component';
 })
 export class TableEscalaComponent implements OnInit {
 
-  public disabled: boolean = true;
+  public condicao: Escala = new Escala()
 
-  public condicao: FuncionarioInterface[] = []
+  public disabled: boolean = true;
 
   public horariosList: PeriodicElement[] = [
     { horarios: '09:00' },
@@ -31,47 +35,19 @@ export class TableEscalaComponent implements OnInit {
 
   public horarios = this.horariosList;
 
-
-  public somenteHorarios() {
-
-    console.log(this.horarios.forEach((element) => {
-      if (element.horarios.length < 9) {
-
-        let segunda = element.horarios[0]
-        let terca = element.horarios[1]
-        let quarta = element.horarios[2]
-        let quinta = element.horarios[3]
-        let sexta = element.horarios[4]
-        let sabado = element.horarios[5]
-        let domingo = element.horarios[6]
-
-        console.log('Essa é a segunda: ', segunda);
-
-
-      }
-    }));
-
-  }
-
   constructor(
     private funcionarioService: FuncionarioService,
     public dialog: MatDialog,
   ) {
 
-    this.funcionarioService.getEscala().subscribe(
+    console.log('Aqui é o getUltimoFuncionariio: ',PainelComponent.getUltimoFuncionario());
+    let teste = {nome: PainelComponent.getUltimoFuncionario()}
+
+
+    this.funcionarioService.getEscala(teste).subscribe(
       resposta => {
         this.condicao = resposta
-        console.log(resposta);
-
-
-        if (this.condicao[0].segunda === '0') {
-          this.disabled = true
-          console.log('Dentro do if: ', this.condicao[0].segunda);
-
-        }
-        else {
-          this.disabled = false
-        }
+        console.log('A condicao é: ', resposta);
       }
     )
   }
@@ -89,7 +65,31 @@ export class TableEscalaComponent implements OnInit {
     'domingo',
   ];
 
-  agendarHorario() {
-    console.log('Horário agendado com sucesso!');
+  agendarHorario(hora: string) {
+
+    let agendamento: Agendamento = new Agendamento();
+    let date: Date = new Date('2022-11-20')
+
+    let res: any
+
+    agendamento.emailCliente = LoginComponent.getUltimoLogin();
+    agendamento.nomeFuncionario = PainelComponent.getUltimoFuncionario();
+    agendamento.dataAgendamento = '2022-11-20';
+    agendamento.hora = hora;
+
+    console.log('Agendamento: ', agendamento);
+
+    this.funcionarioService.postAgendamento(agendamento).subscribe(
+      resposta => {
+        res = resposta
+
+        console.log('Está é a resposta: ', res);
+
+      }
+    )
+
+
+
+
   }
 }
