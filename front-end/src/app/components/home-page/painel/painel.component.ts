@@ -1,4 +1,4 @@
-import { Component, OnInit, OnChanges, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnChanges, SimpleChanges, Output, EventEmitter } from '@angular/core';
 import { FuncionarioService } from 'src/services/funcionario.service';
 import { FuncionarioInterface } from '../../../../interfaces/funcionario-interface';
 import { MatDialog } from '@angular/material/dialog';
@@ -12,8 +12,7 @@ import { ModalDialogComponent } from './modal-dialog/modal-dialog.component';
 export class PainelComponent implements OnInit {
 
   public funcionariosList: FuncionarioInterface[] = []
-
-  public nameFuncionario: FuncionarioInterface[] | any
+  public static ultimoFuncionario: FuncionarioInterface | any
 
   public disponivel: string = 'Disponível'
   public indisponivel: string = 'Indisponível'
@@ -23,24 +22,24 @@ export class PainelComponent implements OnInit {
     public dialog: MatDialog,
     ) {
 
-      this.funcionarioService.getEscala().subscribe(
+      this.funcionarioService.getEmployee().subscribe(
         resposta => {
           this.funcionariosList = resposta
-
-          /*if (this.funcionariosList) {
-            for (let index = 0; index < resposta.length; index++) {
-              const element = resposta[index];
-              console.log(element.nome);
-              this.nameFuncionario = element
-              console.log('Dentro do for: ', ...this.nameFuncionario);
-            }
-            console.log('Aqui está a porra da lista', typeof this.nameFuncionario);
-          }*/
         }
       )
     }
 
-  openDialog() {
+
+    public static getUltimoFuncionario() {
+      return PainelComponent.ultimoFuncionario
+    }
+
+    openDialog(nome: FuncionarioInterface) {
+
+      PainelComponent.ultimoFuncionario = nome
+
+
+
     // debugger
     const dialogRef = this.dialog.open(ModalDialogComponent);
 

@@ -9,18 +9,18 @@
   >
     <!-- Segunda Column -->
     <div class="condicao-segunda" >
-    <ng-container matColumnDef="segunda" *ngIf="condicao[0].segunda === '1'; else disabled_button_segunda">
+    <ng-container matColumnDef="segunda" *ngIf="condicao.segunda === '1'; else disabled_button_segunda">
       <th mat-header-cell *matHeaderCellDef > SEGUNDA </th>
       <td mat-cell *matCellDef="let element">
-        <button (click)="agendarHorario()">{{ element.horarios }}</button>
+        <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
       </td>
     </ng-container>
 
     <ng-template #disabled_button_segunda>
-      <ng-container matColumnDef="segunda" *ngIf="condicao[0].segunda === '0'">
+      <ng-container matColumnDef="segunda" *ngIf="condicao.segunda === '0'">
         <th mat-header-cell *matHeaderCellDef > SEGUNDA </th>
         <td mat-cell *matCellDef="let element">
-          <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
     </ng-template>
@@ -28,18 +28,18 @@
 
     <!-- Terca Column -->
     <div class="condicao-terca" >
-      <ng-container matColumnDef="terca" *ngIf="condicao[0].terca === '1'; else disabled_button_terca">
+      <ng-container matColumnDef="terca" *ngIf="condicao.terca === '1'; else disabled_button_terca">
         <th mat-header-cell *matHeaderCellDef > TERCA </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_terca>
-        <ng-container matColumnDef="terca" *ngIf="condicao[0].terca === '0'">
+        <ng-container matColumnDef="terca" *ngIf="condicao.terca === '0'">
           <th mat-header-cell *matHeaderCellDef > TERCA </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>
@@ -47,18 +47,18 @@
 
     <!-- Quarta Column -->
     <div class="condicao-quarta" >
-      <ng-container matColumnDef="quarta" *ngIf="condicao[0].quarta === '1'; else disabled_button_quarta">
+      <ng-container matColumnDef="quarta" *ngIf="condicao.quarta === '1'; else disabled_button_quarta">
         <th mat-header-cell *matHeaderCellDef > QUARTA </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_quarta>
-        <ng-container matColumnDef="quarta" *ngIf="condicao[0].quarta === '0'">
+        <ng-container matColumnDef="quarta" *ngIf="condicao.quarta === '0'">
           <th mat-header-cell *matHeaderCellDef > QUARTA </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>
@@ -66,18 +66,18 @@
 
     <!-- Quinta Column -->
     <div class="condicao-quinta" >
-      <ng-container matColumnDef="quinta" *ngIf="condicao[0].quinta === '1'; else disabled_button_quinta">
+      <ng-container matColumnDef="quinta" *ngIf="condicao.quinta === '1'; else disabled_button_quinta">
         <th mat-header-cell *matHeaderCellDef > QUINTA </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_quinta>
-        <ng-container matColumnDef="quinta" *ngIf="condicao[0].quinta === '0'">
+        <ng-container matColumnDef="quinta" *ngIf="condicao.quinta === '0'">
           <th mat-header-cell *matHeaderCellDef > QUINTA </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>
@@ -86,18 +86,18 @@
 
     <!-- Sexta Column -->
     <div class="condicao-sexta" >
-      <ng-container matColumnDef="sexta" *ngIf="condicao[0].sexta === '1'; else disabled_button_sexta">
-        <th mat-header-cell *matHeaderCellDef > DOMINGO </th>
+      <ng-container matColumnDef="sexta" *ngIf="condicao.sexta === '1'; else disabled_button_sexta">
+        <th mat-header-cell *matHeaderCellDef > SEXTA </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_sexta>
-        <ng-container matColumnDef="sexta" *ngIf="condicao[0].sexta === '0'">
-          <th mat-header-cell *matHeaderCellDef > DOMINGO </th>
+        <ng-container matColumnDef="sexta" *ngIf="condicao.sexta === '0'">
+          <th mat-header-cell *matHeaderCellDef > SEXTA </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>
@@ -105,18 +105,18 @@
 
     <!-- Sabado Column -->
     <div class="condicao-sabado" >
-      <ng-container matColumnDef="sabado" *ngIf="condicao[0].sabado === '1'; else disabled_button_sabado">
+      <ng-container matColumnDef="sabado" *ngIf="condicao.sabado === '1'; else disabled_button_sabado">
         <th mat-header-cell *matHeaderCellDef > SABADO </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_sabado>
-        <ng-container matColumnDef="sabado" *ngIf="condicao[0].sabado === '0'">
+        <ng-container matColumnDef="sabado" *ngIf="condicao.sabado === '0'">
           <th mat-header-cell *matHeaderCellDef > SABADO </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>
@@ -124,18 +124,18 @@
 
     <!-- Domingo Column -->
     <div class="condicao-domingo" >
-      <ng-container matColumnDef="domingo" *ngIf="condicao[0].domingo === '1'; else disabled_button_domingo">
-        <th mat-header-cell *matHeaderCellDef > SEXTA </th>
+      <ng-container matColumnDef="domingo" *ngIf="condicao.domingo === '1'; else disabled_button_domingo">
+        <th mat-header-cell *matHeaderCellDef > DOMINGO </th>
         <td mat-cell *matCellDef="let element">
-          <button (click)="agendarHorario()">{{ element.horarios }}</button>
+          <button (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
         </td>
       </ng-container>
 
       <ng-template #disabled_button_domingo>
-        <ng-container matColumnDef="domingo" *ngIf="condicao[0].domingo === '0'">
-          <th mat-header-cell *matHeaderCellDef > SEXTA </th>
+        <ng-container matColumnDef="domingo" *ngIf="condicao.domingo === '0'">
+          <th mat-header-cell *matHeaderCellDef > DOMINGO </th>
           <td mat-cell *matCellDef="let element">
-            <button [disabled]="disabled" (click)="agendarHorario()">{{ element.horarios }}</button>
+            <button [disabled]="disabled" (click)="agendarHorario(element.horarios)">{{ element.horarios }}</button>
           </td>
         </ng-container>
       </ng-template>

@@ -11,6 +11,9 @@ import Swal from 'sweetalert2';
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
+
+  public static ultimoLogin: string
+
   constructor(
     private newLoginUser: FormBuilder,
     private loginUserService: UserService,
@@ -56,6 +59,8 @@ export class LoginComponent implements OnInit {
           });
         }
         else {
+          LoginComponent.ultimoLogin = newLogin.email
+
           Swal.fire({
             position: 'top-end',
             icon: 'success',
@@ -68,5 +73,9 @@ export class LoginComponent implements OnInit {
         }
       });
     }
+  }
+
+  public static getUltimoLogin() {
+    return LoginComponent.ultimoLogin
   }
 }
