@@ -12,6 +12,7 @@ import Swal from 'sweetalert2';
 })
 export class LoginComponent implements OnInit {
 
+  // Atributo para gravar o último usuário logado.
   public static ultimoLogin: string
 
   constructor(
